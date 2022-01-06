@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TajMahal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+    <audio src="embrace.mp3" autoplay loop></audio>
+    <header>
+      <a href="#" class="logo"><u>BumboXD</u></a>
+      <div class="navigation">
+        <ul class="menu">
+          <div class="close-btn"></div>
+          <li class="menu-item"><a href="/Home/index.html">Home</a></li>
+          <li class="menu-item">
+            <a class="sub-btn" href="#">7 Wonders <i class="fas fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li class="sub-item"><a href="/TajMahal/index.html">TAJ MAHAL</a></li>
+              <li class="sub-item"><a href="/colloseum/index.html">COLOSSEUM</a></li>
+              <li class="sub-item"><a href="/MachuPichu/index.html">MACHU PICHU</a></li>
+              <li class="sub-item"><a href="/Petra/index.html">PETRA</a></li>
+              <li class="sub-item"><a href="/ChristTheRedeemer/index.html">CHRIST THE REDEEMER</a></li>
+              <li class="sub-item"><a href="/GreatWallOfChina/index.html">GREAT WALL OF CHINA</a></li>
+              <li class="sub-item"><a href="/ChichenItza/index.html">CHICHEN ITZA</a></li>
+            </ul>
+        </li>
+          <li class="menu-item"><a href= "/AboutUs/index.html">About</a></li>
+          <li class="menu-item"><a href="/ContactUs/index.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn"></div>
+    </header>
+
+    <section class="home">
+      <div class="content active">
+        <h1>Taj<span> Mahal</span></h1>
+        <p><font size = "6"> <u>Marble mausoleum in Agra,India</u></font></p>
+      </div>
+      <div class="content">
+        <h1>Taj<span> Mahal</span></h1>
+        <p>The Taj Mahal 'Crown of the Palace', is an ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor Shah Jahan to house the tomb of his favourite wife, Mumtaz Mahal; it also houses the tomb of Shah Jahan himself.</p>      
+      </div>
+      <div class="content">
+        <h1>Taj<span> Mahal</span></h1>
+        <p>The tomb is the centrepiece of a 17-hectare (42-acre) complex, which includes a mosque and a guest house, and is set in formal gardens bounded on three sides by a crenellated wall.</p>      
+      </div>
+      <div class="content">
+        <h1>Taj<span> Mahal</span></h1>
+        <p>Construction of the mausoleum was essentially completed in 1643, but work continued on other phases of the project for another 10 years. The Taj Mahal complex is believed to have been completed in its entirety in 1653 at a cost estimated at the time to be around ₹32 million, which in 2020 would be approximately ₹70 billion.</p>      
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-discord"></i></a>
+        <a href="https://github.com/Bumbowo"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/bumbowo_"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+  
+  </script>
+  
+    <video class="Background" src="TajMahal.mp4" autoplay muted loop></video>
+  </body>
+</html>
