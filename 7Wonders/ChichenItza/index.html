@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChichenItza</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+    <audio src="embrace.mp3" autoplay loop></audio>
+    <header>
+      <a href="#" class="logo"><u>BumboXD</u></a>
+      <div class="navigation">
+        <ul class="menu">
+          <div class="close-btn"></div>
+          <li class="menu-item"><a href="/Home/index.html">Home</a></li>
+          <li class="menu-item">
+            <a class="sub-btn" href="#">7 Wonders <i class="fas fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li class="sub-item"><a href="/TajMahal/index.html">TAJ MAHAL</a></li>
+              <li class="sub-item"><a href="/colloseum/index.html">COLOSSEUM</a></li>
+              <li class="sub-item"><a href="/MachuPichu/index.html">MACHU PICHU</a></li>
+              <li class="sub-item"><a href="/Petra/index.html">PETRA</a></li>
+              <li class="sub-item"><a href="/ChristTheRedeemer/index.html">CHRIST THE REDEEMER</a></li>
+              <li class="sub-item"><a href="/GreatWallOfChina/index.html">GREAT WALL OF CHINA</a></li>
+              <li class="sub-item"><a href="/ChichenItza/index.html">CHICHEN ITZA</a></li>
+            </ul>
+        </li>
+          <li class="menu-item"><a href= "/AboutUs/index.html">About</a></li>
+          <li class="menu-item"><a href="/ContactUs/index.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn"></div>
+    </header>
+
+    <section class="home">
+      <div class="content active">
+        <h1>Chichen<span> Itza</span></h1>
+        <p><font size = "11">Yucatán, Mexico</font></p>
+      </div>
+      <div class="content">
+        <h1>Chichen<span> Itza</span></h1>
+        <p>Chichen Itza was a major focal point in the Northern Maya Lowlands from the Late Classic (c. AD 600–900) through the Terminal Classic (c. AD 800–900) and into the early portion of the Postclassic period (c. AD 900–1200).</p>      
+      </div>
+      <div class="content">
+        <h1>Chichen<span> Itza</span></h1>
+        <p>The site exhibits a multitude of architectural styles, reminiscent of styles seen in central Mexico and of the Puuc and Chenes styles of the Northern Maya lowlands. The presence of central Mexican styles was once thought to have been representative of direct migration or even conquest from central Mexico, but most contemporary interpretations view the presence of these non-Maya styles more as the result of cultural diffusion.</p>      
+      </div>
+      <div class="content">
+        <h1>Chichen<span> Itza</span></h1>
+        <p>Chichen Itza was one of the largest Maya cities and it was likely to have been one of the mythical great cities, or Tollans, referred to in later Mesoamerican literature.[2] The city may have had the most diverse population in the Maya world, a factor that could have contributed to the variety of architectural styles at the site.</p>      
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-discord"></i></a>
+        <a href="https://github.com/Bumbowo"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/bumbowo_"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+  
+  </script>
+  
+    <video class="Background" src="ChichenItza.mp4" autoplay muted loop></video>
+  </body>
+</html>
