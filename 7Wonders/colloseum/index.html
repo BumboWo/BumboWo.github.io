@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLLOSEUM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+    <audio src="embrace.mp3" autoplay loop></audio>
+    <header>
+      <a href="#" class="logo"><u>BumboXD</u></a>
+      <div class="navigation">
+        <ul class="menu">
+          <div class="close-btn"></div>
+          <li class="menu-item"><a href="/Home/index.html">Home</a></li>
+          <li class="menu-item">
+            <a class="sub-btn" href="#">7 Wonders<i class="fas fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li class="sub-item"><a href="/TajMahal/index.html">TAJ MAHAL</a></li>
+              <li class="sub-item"><a href="/colloseum/index.html">COLOSSEUM</a></li>
+              <li class="sub-item"><a href="/MachuPichu/index.html">MACHU PICHU</a></li>
+              <li class="sub-item"><a href="/Petra/index.html">PETRA</a></li>
+              <li class="sub-item"><a href="/ChristTheRedeemer/index.html">CHRIST THE REDEEMER</a></li>
+              <li class="sub-item"><a href="/GreatWallOfChina/index.html">GREAT WALL OF CHINA</a></li>
+              <li class="sub-item"><a href="/ChichenItza/index.html">CHICHEN ITZA</a></li>
+            </ul>
+        </li>
+          <li class="menu-item"><a href= "/AboutUs/index.html">About</a></li>
+          <li class="menu-item"><a href="/ContactUs/index.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn"></div>
+    </header>
+
+    <section class="home">
+      <div class="content active">
+        <h1>Colloseum<br><span></span></h1>
+        <p><font size = "6"><u>Ancient Roman amphitheatre in Rome, Italy</u></font></p>
+      </div>
+      <div class="content">
+        <h1>Colloseum<br><span></span></h1>
+        <p>It is the largest ancient amphitheatre ever built, and is still the largest standing amphitheatre in the world today, despite its age.</p>      
+      </div>
+      <div class="content">
+        <h1>Colloseum<br><span></span></h1>
+        <p>Construction began under the emperor Vespasian and was completed in 80 AD under his successor and heir, Titus. Further modifications were made during the reign of Domitian. The three emperors that were patrons of the work are known as the Flavian dynasty, and the amphitheatre was named the Flavian Amphitheatre</p>      
+      </div>
+      <div class="content">
+        <h1>Colloseum<br><span></span></h1>
+        <p>The Colosseum is built of travertine limestone, tuff (volcanic rock), and brick-faced concrete. The Colosseum could hold an estimated 50,000 to 80,000 spectators at various points in its history having an average audience of some 65,000; it was used for gladiatorial contests and public spectacles including animal hunts, executions, re-enactments of famous battles, and dramas based on Roman mythology, and briefly mock sea battles.</p>      
+      </div>
+      <div class="content">
+        <h1>Colloseum<br><span></span></h1>
+        <p>The building ceased to be used for entertainment in the early medieval era. It was later reused for such purposes as housing, workshops, quarters for a religious order, a fortress, a quarry, and a Christian shrine.</p>      
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-discord"></i></a>
+        <a href="https://github.com/Bumbowo"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/bumbowo_"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+  
+  </script>
+  
+    <video class="Background" src="Colloseum.mp4" autoplay muted loop></video>
+  </body>
+</html>
