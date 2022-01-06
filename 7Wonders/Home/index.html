@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7Wonders</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+    <audio src="embrace.mp3" autoplay loop></audio>
+    <header>
+      <a href="#" class="logo"><u>BumboXD</u></a>
+      <div class="navigation">
+        <ul class="menu">
+          <div class="close-btn"></div>
+          <li class="menu-item"><a href="/Home/index.html">Home</a></li>
+          <li class="menu-item">
+            <a class="sub-btn" href="#">7 Wonders <i class="fas fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li class="sub-item"><a href="/TajMahal/index.html">TAJ MAHAL</a></li>
+              <li class="sub-item"><a href="/colloseum/index.html">COLOSSEUM</a></li>
+              <li class="sub-item"><a href="/MachuPichu/index.html">MACHU PICHU</a></li>
+              <li class="sub-item"><a href="/Petra/index.html">PETRA</a></li>
+              <li class="sub-item"><a href="/ChristTheRedeemer/index.html">CHRIST THE REDEEMER</a></li>
+              <li class="sub-item"><a href="/GreatWallOfChina/index.html">GREAT WALL OF CHINA</a></li>
+              <li class="sub-item"><a href="/ChichenItza/index.html">CHICHEN ITZA</a></li>
+            </ul>
+        </li>
+          <li class="menu-item"><a href= "/AboutUs/index.html">About</a></li>
+          <li class="menu-item"><a href="/ContactUs/index.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn"></div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="5.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="6.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Wonders<br><span>of The World</span></h1>
+        <p>“Mystery creates wonder and wonder is the basis of man’s desire to understand.”<br> -Neil Armstrong</p>
+      </div>
+      <div class="content">
+        <h1>Why<span>only 7 wonders were recognised?</span></h1>
+        <p>The number 7 is considered to be a lucky number in Greece. <br> That is because this particular number is believed to bring prosperity and symbolizes perfection.</p>
+      </div>
+      <div class="content">
+        <h1>7 Wonders<br><span>of ancient world</span></h1>
+        <p>The first 7 wonders of the world consist of The Pyramids of Giza, Temple of Artemis, Lighthouse of Alexandria, Hanging Gardens of Babylon, Mausoleum at Halicarnassus, The Colossus of Rhodes and the Statue of Zeus. <br>They are now referred to as the <b>Seven Wonders of the Ancient World.</b> </p>
+      </div>
+      <div class="content">
+        <h1>how the wonders<br><span> were chosen?</span></h1>
+        <p>The first list was actually chosen by travelers themselves. They first referred to it as the Sights of the World even if they were all located in the Mediterranean and the Middle East. However, at the beginning of the new millennium, a campaign was raised to choose the new places to be on the list.</p>
+      </div>
+      <div class="content">
+        <h1>the 7 wonders<br><span>campaign</span></h1>
+        <p>The campaign is known as the New7Wonders of the World was led by Bernard Weber. Out of 200 of the most popular monuments all over the world, only the seven will be chosen. 
+
+          For seven years, people all over the world voted through the internet and telephone. Over a hundred million votes were cast since it lasted for years. The winners were announced on the 7th of July 2007. </p>
+      </div>
+      <div class="content">
+        <h1>the new 7 wonders<br><span>of the world</span></h1>
+        <p>The new 7 Wonders of the World are located in different countries from different continents. The Great Wall of China, the Petra in Jordan, the Taj Mahal in India, and the Colesseum in Italy. Along with them are the Christ the Redeemer in Brazil, Chichen Itza in Mexico, and lastly Machu Picchu in Peru. All of them are known to be considered as UNESCO World Heritage Sites.</p>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-discord"></i></a>
+        <a href="https://github.com/Bumbowo"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/bumbowo_"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
