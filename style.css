@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+html{
+	scroll-behavior: smooth;
+}
+*{
+	/*background-color: #24252a;*/
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+header{
+	display: flex;
+	justify-content: flex-end;
+	padding: 30px 10%;
+	align-items: center;
+	flex-wrap: nowrap;
+} 
+.nav_links{
+	cursor: pointer;
+	list-style: none;
+}
+.nav_links li{
+	display: inline-block;
+	padding: 0px 20px;
+	border-radius: 5px;
+	height: 29px;
+}
+li, .NavLinks{
+	text-decoration: none;
+	font-family: 'Montserrat';
+	color: white;
+	font-size: 16px;
+	font-weight: 500;
+}
+.NavLinks{
+	background:
+    linear-gradient(
+      to right,
+      rgba(100, 200, 200, 0),
+      rgba(100, 200, 200, 0)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+.NavLinks:hover {
+	background-size: 0 3px, 100% 3px;
+  }
+.logo{
+	margin-right: auto;
+	text-decoration: underline;
+	color: white;
+	font-family: "Montserrat";
+	font-weight: 500;
+	font-size: 23px;
+}
+.Image{
+	background-color: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(5px);
+	padding: 10px, 10px;
+	border-radius: 10px;
+	position: absolute;
+	max-width: 700px;
+	margin-top: 5%;
+	margin-left: 50%;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.content{
+	/*background-color: blanchedalmond;*/
+	max-width: 30%;
+	margin-top: 7%;
+	margin-left: 120px;
+}
+.Heading{
+	color: white;
+	font-size: 45px;
+	font-family: "Montserrat";
+}
+.Heading span{
+	color : rgb(81, 0, 243);
+}
+.content p{
+	margin-top: 10%;
+	font-size: 20px;
+	color: rgb(228, 228, 228);
+}
+.view{
+	margin-top: 50px;
+	margin-left: 5px;
+}
+.view a{
+	background-color: #0094ce;
+  	color: white;
+  	padding: 15px 25px;
+  	text-decoration: none;
+  	cursor: pointer;
+  	border: none;
+	font-family: "Montserrat";
+	border-radius: 7px;
+	border: 1px solid rgba(255, 255, 255, 0.289);
+}
+.section1{
+	height: 100vh;
+	width: 100%;
+	background-image: url(images/back.png);
+}
+.section2{
+	height: 100vh;
+	width: 100%;
+	background-color: #0094ce;
+}
